@@ -14,9 +14,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-              <Image src="/images/logo.png" alt="Porto Seguro" width={150} height={40} className="w-auto h-8 mb-4" />
+              <Image src="/images/logo-porto-siao-azul.svg" alt="Porto Sião" width={150} height={40} className="w-auto h-8 mb-4" />
               <p className="text-gray-600 mb-4">
-                Consórcio Porto Seguro: a melhor forma de conquistar seu imóvel com parcelas que cabem no seu bolso.
+                Consórcio Porto Sião: a melhor forma de conquistar seu imóvel com parcelas que cabem no seu bolso.
               </p>
               <div className="flex space-x-4">
                 <motion.a
@@ -106,11 +106,11 @@ export default function Footer() {
               <ul className="space-y-3">
                 <li className="flex items-center">
                   <Phone size={18} className="text-[#00A0E0] mr-2" />
-                  <span className="text-gray-600">0800 444-6600</span>
+                  <span className="text-gray-600">0800 000-0000</span>
                 </li>
                 <li className="flex items-center">
                   <Mail size={18} className="text-[#00A0E0] mr-2" />
-                  <span className="text-gray-600">contato@portoseguro.com.br</span>
+                  <span className="text-gray-600">contato@siao.com.br</span>
                 </li>
               </ul>
             </motion.div>
@@ -128,12 +128,12 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center border-t pt-6">
           <div className="text-xs text-gray-500 mb-4 md:mb-0">
-            <p>CNPJ 07.681.084/0001-35</p>
-            <p>© {currentYear} Porto Seguro. Todos os direitos reservados.</p>
+            <p>CNPJ 00.000.000/0000-00</p>
+            <p>© {currentYear} Porto Sião<object data="" type=""></object>. Todos os direitos reservados.</p>
           </div>
 
           <div className="flex flex-col items-end">
-            <div className="text-[#00A0E0] font-bold mb-2">Atendimento: 0800 444-6600</div>
+            <div className="text-[#00A0E0] font-bold mb-2">Atendimento: 0000 000-0000</div>
             <div className="flex gap-4 text-xs">
               <a href="#" className="text-[#00A0E0] hover:text-[#0080B0] transition-colors duration-200">
                 Políticas de privacidade
