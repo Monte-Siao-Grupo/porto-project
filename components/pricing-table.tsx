@@ -43,7 +43,7 @@ export default function PricingTable() {
             <tr>
               <th className="bg-[#00A0E0] text-white p-4 text-center border border-[#0090D0]">CRÉDITO</th>
               <th className="bg-[#00A0E0] text-white p-4 text-center border border-[#0090D0]">PARCELA TRADICIONAL</th>
-              <th className="bg-[#00A0E0] text-white p-4 text-center border border-[#0090D0]">PARCELA FLEX</th>
+              <th className="bg-[#00A0E0] text-white p-4 text-center border border-[#0090D0]">PARCELA PORTO SIÃO</th>
             </tr>
           </thead>
           <tbody>
