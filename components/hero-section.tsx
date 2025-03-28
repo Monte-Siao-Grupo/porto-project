@@ -61,10 +61,10 @@ export default function HeroSection() {
           animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="relative w-full h-[300px] overflow-hidden">
+          <div className="relative w-full h-[500px] overflow-hidden">
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="relative w-full h-full overflow-hidden rounded-full">
-                <Image src="/images/casa.svg" alt="Interior de imóvel" fill className="object-cover" priority />
+              <div className="relative w-full h-full overflow-hidden">
+                <Image src="/images/house-car.svg" alt="Interior de imóvel" fill className="object-cover" priority />
               </div>
             </div>
           </div>
