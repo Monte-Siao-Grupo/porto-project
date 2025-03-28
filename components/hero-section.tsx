@@ -9,7 +9,7 @@ import { useRef, useEffect, useState } from "react"
 export default function HeroSection() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.3 })
-  const [currentDate, setCurrentDate] = useState(null);
+  const [currentDate, setCurrentDate] = useState<Date | null>(null);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -35,7 +35,7 @@ export default function HeroSection() {
       <div className="px-10 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center relative z-10">
         {/* Coluna da esquerda - Título */}
         <motion.div
-          className="text-white col-span-1 lg:col-span-1 flex flex-col items-start"
+          className="text-white col-span-1 lg:col-span-1 flex flex-col items-center text-center"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -66,16 +66,10 @@ export default function HeroSection() {
           animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="relative w-full h-[250px] overflow-hidden"> {/* Ajuste a altura conforme necessário */}
+          <div className="relative w-full h-[400px] overflow-hidden">
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="relative w-full h-full overflow-hidden">
-                <Image 
-                  src="/images/house-car.svg" 
-                  alt="Interior de imóvel" 
-                  fill 
-                  className="object-contain" // Usando object-contain para evitar corte
-                  priority 
-                />
+                <Image src="/images/siao2.svg" alt="imóvel" fill className="object-contain" priority />
               </div>
             </div>
           </div>
