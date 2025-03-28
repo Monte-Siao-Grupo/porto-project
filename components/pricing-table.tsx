@@ -94,3 +94,12 @@ export default function PricingTable() {
   )
 }
 
+export async function getStaticProps() {
+  const data = await fetchData(); // Substitua por sua lógica de busca de dados
+  return {
+    props: {
+      data,
+    },
+  };
+}
+
