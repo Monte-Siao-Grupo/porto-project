@@ -4,11 +4,12 @@ import Image from "next/image"
 import SimulationCard from "./simulation-card"
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
-import { useRef } from "react"
+import { useRef, useEffect, useState } from "react"
 
 export default function HeroSection() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.3 })
+  const [currentDate, setCurrentDate] = useState(null);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -24,6 +25,10 @@ export default function HeroSection() {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   }
+
+  useEffect(() => {
+    setCurrentDate(new Date());
+  }, []);
 
   return (
     <section id="simulation" className="bg-[#00A0E0] pt-16 pb-16 relative overflow-hidden min-h-screen flex items-center" ref={ref}>
@@ -61,10 +66,16 @@ export default function HeroSection() {
           animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="relative w-full h-[500px] overflow-hidden">
+          <div className="relative w-full h-[250px] overflow-hidden"> {/* Ajuste a altura conforme necessário */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="relative w-full h-full overflow-hidden">
-                <Image src="/images/house-car.svg" alt="Interior de imóvel" fill className="object-cover" priority />
+                <Image 
+                  src="/images/house-car.svg" 
+                  alt="Interior de imóvel" 
+                  fill 
+                  className="object-contain" // Usando object-contain para evitar corte
+                  priority 
+                />
               </div>
             </div>
           </div>
