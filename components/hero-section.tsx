@@ -69,7 +69,7 @@ export default function HeroSection() {
           <div className="relative w-full h-[400px] overflow-hidden">
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="relative w-full h-full overflow-hidden">
-                <Image src="/images/casa.svg" alt="imóvel" fill className="object-contain" priority />
+                <Image src="/images/casa-carro.svg" alt="imóvel" fill className="object-contain" priority />
               </div>
             </div>
           </div>
