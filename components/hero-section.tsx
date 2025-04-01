@@ -60,7 +60,7 @@ export default function HeroSection() {
 
         {/* Coluna da direita - Imagem */}
         <motion.div
-          className="relative col-span-1 flex items-center justify-center"
+          className="relative col-span-1 flex items-center justify-center hidden md:block"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
           transition={{ duration: 0.8 }}
