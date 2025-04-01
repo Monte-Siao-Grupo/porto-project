@@ -1,5 +1,4 @@
 "use client"
-
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
@@ -15,8 +14,11 @@ export default function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10)
     }
-
-    window.addEventListener("scroll", handleScroll)
+    
+    // Initial check
+    handleScroll()
+    
+    window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
@@ -32,7 +34,9 @@ export default function Header() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled ? "bg-white shadow-md py-2" : "bg-[#00A0E0] py-4",
+        isScrolled 
+          ? "bg-white shadow-md py-4" 
+          : "bg-gradient-to-r from-[#00A0E0] to-[#0077B6] py-4"
       )}
     >
       <div className="container mx-auto px-4">
@@ -40,16 +44,29 @@ export default function Header() {
           <Link href="/">
             <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
               <Image
-                src="/images/logo.png"
-                alt="Porto Seguro"
+                src="/images/logo-branca.svg"
+                alt="Porto Sião"
                 width={150}
                 height={40}
-                className="w-auto h-8"
+                className={cn(
+                  "w-auto h-8",
+                  isScrolled && "hidden"
+                )}
                 priority
               />
+              {isScrolled && (
+                <Image
+                  src="/images/logo-azul.svg"
+                  alt="Porto Sião"
+                  width={150}
+                  height={40}
+                  className="w-auto h-8"
+                  priority
+                />
+              )}
             </motion.div>
           </Link>
-
+          
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-6">
             {navItems.map((item, index) => (
@@ -71,7 +88,7 @@ export default function Header() {
               </motion.div>
             ))}
           </nav>
-
+          
           {/* Mobile Menu Button */}
           <button
             className="md:hidden"
@@ -86,7 +103,7 @@ export default function Header() {
           </button>
         </div>
       </div>
-
+      
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <motion.div
@@ -114,4 +131,3 @@ export default function Header() {
     </header>
   )
 }
-

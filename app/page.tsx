@@ -1,3 +1,4 @@
+import Header from "@/components/header"
 import HeroSection from "@/components/hero-section"
 import PricingTable from "@/components/pricing-table"
 import BenefitsSection from "@/components/benefits-section"
@@ -10,7 +11,7 @@ import ScrollToTop from "@/components/scroll-to-top"
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
-      {/* <Header /> */}
+      <Header />
       <HeroSection />
       <PricingTable />
       <BenefitsSection />
