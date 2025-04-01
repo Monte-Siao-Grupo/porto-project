@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-              <Image src="/images/logo-porto-siao-azul.svg" alt="Porto Sião" width={150} height={40} className="w-auto h-8 mb-4" />
+              <Image src="/images/logo-azul.svg" alt="Porto Sião" width={150} height={40} className="w-auto h-8 mb-4" />
               <p className="text-gray-600 mb-4">
                 Consórcio Porto Sião: a melhor forma de conquistar seu imóvel com parcelas que cabem no seu bolso.
               </p>

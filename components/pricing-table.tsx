@@ -86,6 +86,7 @@ export default function PricingTable() {
           }}
           whileTap={{ scale: 0.95 }}
           transition={{ type: "spring", stiffness: 400, damping: 17 }}
+          onClick={() => window.open("https://wa.link/y5f0ps", "_blank")}
         >
           FAZER UMA SIMULAÇÃO!
         </motion.button>

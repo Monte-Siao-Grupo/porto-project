@@ -31,7 +31,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section id="simulation" className="bg-[#00A0E0] pt-16 pb-16 relative overflow-hidden min-h-screen flex items-center" ref={ref}>
+    <section id="simulation" className="bg-gradient-to-r from-[#00A0E0] to-[#0077B6] pt-16 pb-16 relative overflow-hidden min-h-screen flex items-center" ref={ref}>
       <div className="px-10 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center relative z-10">
         {/* Coluna da esquerda - Título */}
         <motion.div
@@ -41,8 +41,8 @@ export default function HeroSection() {
           animate={isInView ? "visible" : "hidden"}
         >
           <motion.div variants={itemVariants}>
-            <Image src="/images/logo-porto-siao.svg" alt="Logo Montesiao" width={150} height={150} className="mb-4" />
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight text-left">
+            <Image src="/images/logo-branca.svg" alt="Logo Montesiao" width={250} height={250} className="mb-4" />
+            <h1 className="text-5xl md:text-5xl lg:text-4xl font-bold mb-4 leading-tight text-left">
               Aproveite parcelas 40% menores no Consórcio Porto Sião!
             </h1>
           </motion.div>
@@ -69,7 +69,7 @@ export default function HeroSection() {
           <div className="relative w-full h-[400px] overflow-hidden">
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="relative w-full h-full overflow-hidden">
-                <Image src="/images/casa-carro.svg" alt="imóvel" fill className="object-contain" priority />
+                <Image src="/images/carro-siao.svg" alt="imóvel" fill className="object-contain" priority />
               </div>
             </div>
           </div>

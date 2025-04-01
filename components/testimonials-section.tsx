@@ -195,6 +195,7 @@ export default function TestimonialsSection() {
             whileHover={{ scale: 1.05, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)" }}
             whileTap={{ scale: 0.95 }}
             className="bg-[#00A0E0] text-white px-8 py-3 rounded-full font-bold shadow-md"
+            onClick={() => window.open("https://wa.link/y5f0ps", "_blank")}
           >
             FAZER UMA SIMULAÇÃO!
           </motion.button>
